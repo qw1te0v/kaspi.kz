@@ -30,9 +30,18 @@ p{
 }
 
 .header-card-number{
-    padding-top: 30px;
+    padding-top: 45px;
     font-size: 20px;
     padding-bottom: 30px;
+}
+
+.header-money-d{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.header-money{
+    font-size: 30px;
 }
 
 a{
