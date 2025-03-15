@@ -33,3 +33,34 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 60) { // Если прокрутка больше 50px
+            header.classList.add("shrink"); // Уменьшаем хедер
+            header.style.backgroundColor = "#d29b5a"; // Меняем цвет фона
+            header.style.color = "#fff"; // Меняем цвет текста
+        } else {
+            header.classList.remove("shrink"); // Возвращаем обратно
+            header.style.backgroundColor = "#d29b5a"; // Возвращаем исходный цвет фона
+            header.style.color = "#ffffff"; // Возвращаем исходный цвет текста
+        }
+    });
+});
+
+function changeActive(clickedItem) {
+    // Убираем класс active1 у всех элементов
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => item.classList.remove('active1'));
+
+    // Добавляем класс active1 к нажатому элементу
+    clickedItem.classList.add('active1');
+
+    // Здесь можно добавить логику для изменения локации
+    if (clickedItem.textContent.includes("Главная")) {
+        window.location.href = "index.html"; // Замените на нужный URL
+    }
+
+}
