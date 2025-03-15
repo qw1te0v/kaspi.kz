@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Если текущая вкладка левее новой (новая правее активной)
             if (Array.from(contents).indexOf(newTab) > Array.from(contents).indexOf(activeTab)) {
-                activeTab.classList.add("enter-left"); // Текущая уходит вправо
-                newTab.classList.add("exit-right"); // Новая появляется слева
+                activeTab.classList.add("exit-left"); // Текущая уходит вправо
+                newTab.classList.add("enter-right"); // Новая появляется слева
             } else {
-                activeTab.classList.add("exit-left"); // Текущая уходит влево
-                newTab.classList.add("enter-right"); // Новая появляется справа
+                activeTab.classList.add("exit-right"); // Текущая уходит влево
+                newTab.classList.add("enter-left"); // Новая появляется справа
             }
 
             // Через 500 мс обновляем активную вкладку
